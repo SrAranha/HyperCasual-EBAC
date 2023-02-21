@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerCollision : MonoBehaviour
@@ -24,7 +22,7 @@ public class PlayerCollision : MonoBehaviour
     }
     private void StopTime()
     {
-        Time.timeScale = 0;
+        Time.timeScale = 0f;
     }
     private void LoseGame()
     {
