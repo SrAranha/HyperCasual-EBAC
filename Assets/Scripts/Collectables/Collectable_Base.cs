@@ -1,10 +1,10 @@
 using UnityEngine;
 
-public class CoinCollectable : MonoBehaviour
+public class Collectable_Base : MonoBehaviour
 {
-    public int value;
+    [Header("Collectable Base")]
+    public string playerTag = "Player";
 
-    private string playerTag = "Player";
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag(playerTag))
@@ -12,7 +12,7 @@ public class CoinCollectable : MonoBehaviour
             Collect();
         }
     }
-    private void Collect()
+    protected virtual void Collect()
     {
         gameObject.SetActive(false);
     }
