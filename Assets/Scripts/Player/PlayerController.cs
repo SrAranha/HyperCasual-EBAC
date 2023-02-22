@@ -6,6 +6,7 @@ public class PlayerController : Singleton<PlayerController>
 {
     [SerializeField] private float speedForward;
     [SerializeField] private float speedSides;
+    [SerializeField] private SphereCollider coinCollector;
 
     private float currentSpeedForward;
     private Vector2 previousMousePos;
@@ -47,6 +48,10 @@ public class PlayerController : Singleton<PlayerController>
         var pos = transform.position;
         pos.y += newHeight;
         transform.position = pos;
+    }
+    public void ChangeCoinCollector(float newRadius)
+    {
+        coinCollector.radius += newRadius;
     }
     #endregion
 }

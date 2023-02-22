@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Obstacles
   - FinishLine
+  - CoinCollector
   layers:
   - Default
   - TransparentFX
