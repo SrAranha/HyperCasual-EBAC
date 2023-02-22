@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class PlayerCollision : MonoBehaviour
+public class PlayerCollision : Singleton<PlayerCollision>
 {
     [Header("Lose Game")]
     public GameObject loseScreen;
@@ -8,12 +8,16 @@ public class PlayerCollision : MonoBehaviour
     [Header("Win Game")]
     public GameObject winScreen;
     public string finishLineTag;
+    [Header("PowerUp")]
+    public bool invencible;
     private void OnCollisionEnter(Collision collision)
     {
         Debug.Log("Colidiu com " + collision.gameObject.tag);
+
         if (collision.gameObject.CompareTag(obstacleTag))
         {
-            LoseGame();
+            Physics.IgnoreCollision(collision.collider, this.gameObject.GetComponent<BoxCollider>(), invencible);
+            if (!invencible) LoseGame();
         }
         if (collision.gameObject.CompareTag(finishLineTag))
         {
