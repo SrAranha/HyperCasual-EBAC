@@ -42,5 +42,11 @@ public class PlayerController : Singleton<PlayerController>
         currentSpeedForward = newSpeed;
         Invoke(nameof(ResetSpeed), duration);
     }
+    public void ChangeHeight(float newHeight)
+    {
+        var pos = transform.position;
+        pos.y += newHeight;
+        transform.position = pos;
+    }
     #endregion
 }
