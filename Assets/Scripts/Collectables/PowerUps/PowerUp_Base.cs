@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class PowerUp_Base : Collectable_Base
 {
+    [Header("PowerUp")]
     public float duration;
     protected override void Collect()
     {
