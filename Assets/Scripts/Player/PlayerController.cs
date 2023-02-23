@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerController : Singleton<PlayerController>
@@ -7,18 +5,30 @@ public class PlayerController : Singleton<PlayerController>
     [SerializeField] private float speedForward;
     [SerializeField] private float speedSides;
     [SerializeField] private SphereCollider coinCollector;
-
+    public bool canMove;
+    
+    private PlayerAnimation playerAnimation;
     private float currentSpeedForward;
     private Vector2 previousMousePos;
+
+    private void OnValidate()
+    {
+        playerAnimation = GetComponent<PlayerAnimation>();
+    }
     private void Start()
     {
+        canMove = false;
         ResetSpeed();
+        playerAnimation.PlayAnimation(PlayerAnimation.AnimationTypes.IDLE);
     }
 
     private void FixedUpdate()
     {
-        MovePlayerForward();
-        MovePlayerSides();
+        if (canMove == true)
+        {
+            MovePlayerForward();
+            MovePlayerSides();
+        }
     }
     private void MovePlayerForward()
     {

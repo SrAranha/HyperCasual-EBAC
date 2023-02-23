@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class PlayerCollision : Singleton<PlayerCollision>
 {
+    [Header("ReduceTimeScale")]
+    public SO_TimeScale timeScale;
     [Header("Lose Game")]
     public GameObject loseScreen;
     public string obstacleTag;
@@ -10,6 +12,12 @@ public class PlayerCollision : Singleton<PlayerCollision>
     public string finishLineTag;
     [Header("PowerUp")]
     public bool invencible;
+
+    private PlayerAnimation playerAnimation;
+    private void OnValidate()
+    {
+        playerAnimation = GetComponent<PlayerAnimation>();
+    }
     private void OnCollisionEnter(Collision collision)
     {
         Debug.Log("Colidiu com " + collision.gameObject.tag);
@@ -17,25 +25,26 @@ public class PlayerCollision : Singleton<PlayerCollision>
         if (collision.gameObject.CompareTag(obstacleTag))
         {
             Physics.IgnoreCollision(collision.collider, this.gameObject.GetComponent<BoxCollider>(), invencible);
-            if (!invencible) LoseGame();
+            if (!invencible)
+            {
+                LoseGame();
+            }
         }
         if (collision.gameObject.CompareTag(finishLineTag))
         {
             WinGame();
         }
     }
-    private void StopTime()
-    {
-        Time.timeScale = 0f;
-    }
     private void LoseGame()
     {
-        StopTime();
+        playerAnimation.PlayAnimation(PlayerAnimation.AnimationTypes.DEATH);
         loseScreen.SetActive(true);
+        StartingGame.ReduceTimeScale(timeScale.timeScale);
     }
     private void WinGame()
     {
-        StopTime();
+        playerAnimation.PlayAnimation(PlayerAnimation.AnimationTypes.IDLE);
         winScreen.SetActive(true);
+        StartingGame.ReduceTimeScale(timeScale.timeScale);
     }
 }
