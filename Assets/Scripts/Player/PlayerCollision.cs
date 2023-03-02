@@ -20,8 +20,6 @@ public class PlayerCollision : Singleton<PlayerCollision>
     }
     private void OnCollisionEnter(Collision collision)
     {
-        Debug.Log("Colidiu com " + collision.gameObject.tag);
-
         if (collision.gameObject.CompareTag(obstacleTag))
         {
             Physics.IgnoreCollision(collision.collider, this.gameObject.GetComponent<BoxCollider>(), invencible);
