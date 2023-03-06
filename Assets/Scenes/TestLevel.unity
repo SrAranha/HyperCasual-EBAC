@@ -2492,6 +2492,7 @@ GameObject:
   - component: {fileID: 1582721933}
   - component: {fileID: 1582721935}
   - component: {fileID: 1582721934}
+  - component: {fileID: 1582721941}
   - component: {fileID: 1582721938}
   - component: {fileID: 1582721939}
   - component: {fileID: 1582721940}
@@ -2602,6 +2603,23 @@ MonoBehaviour:
     trigger: RUN
   - type: 2
     trigger: DEATH
+--- !u!114 &1582721941
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1582721932}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 20b2b54ce92cd7b4cb64ec2a660462da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  keyStartScale: 107
+  initialScale: {x: 0, y: 0, z: 0}
+  finalScale: {x: 1, y: 1, z: 1}
+  duration: 0.5
+  ease: 30
 --- !u!1 &1962530026
 GameObject:
   m_ObjectHideFlags: 0

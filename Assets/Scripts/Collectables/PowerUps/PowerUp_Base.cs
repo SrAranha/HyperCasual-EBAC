@@ -7,6 +7,7 @@ public class PowerUp_Base : Collectable_Base
     protected override void Collect()
     {
         base.Collect();
+
         PowerUpStart();
     }
     protected virtual void PowerUpStart()
