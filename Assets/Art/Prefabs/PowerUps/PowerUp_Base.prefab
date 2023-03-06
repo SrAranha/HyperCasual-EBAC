@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2984181586341364622}
   - component: {fileID: 2984181586341364623}
   - component: {fileID: 2984181586341364620}
+  - component: {fileID: -5394243755184584278}
   m_Layer: 0
   m_Name: PowerUp_Base
   m_TagString: Untagged
@@ -64,6 +65,23 @@ MonoBehaviour:
   animDuration: 1
   ease: 30
   powerupDuration: 1
+--- !u!114 &-5394243755184584278
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2984181586341364621}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 20b2b54ce92cd7b4cb64ec2a660462da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  keyStartScale: 107
+  initialScale: {x: 0, y: 0, z: 0}
+  finalScale: {x: 1, y: 1, z: 1}
+  duration: 1
+  ease: 25
 --- !u!1 &2984181588351625644
 GameObject:
   m_ObjectHideFlags: 0

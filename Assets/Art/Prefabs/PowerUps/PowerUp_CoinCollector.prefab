@@ -94,6 +94,7 @@ GameObject:
   - component: {fileID: 7017859576582358778}
   - component: {fileID: 7017859576582358779}
   - component: {fileID: 7017859576582358772}
+  - component: {fileID: 7527972479409478566}
   m_Layer: 0
   m_Name: PowerUp_CoinCollector
   m_TagString: Untagged
@@ -148,3 +149,20 @@ MonoBehaviour:
   ease: 30
   powerupDuration: 5
   radius: 10
+--- !u!114 &7527972479409478566
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7017859576582358777}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 20b2b54ce92cd7b4cb64ec2a660462da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  keyStartScale: 107
+  initialScale: {x: 0, y: 0, z: 0}
+  finalScale: {x: 1, y: 1, z: 1}
+  duration: 1
+  ease: 25

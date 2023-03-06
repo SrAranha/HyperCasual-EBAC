@@ -19,9 +19,12 @@ public class ScaleHelper : MonoBehaviour
 
     IEnumerator Scale()
     {
-        transform.localScale = initialScale;
-        transform.DOScale(finalScale, duration).SetEase(ease);
-        yield return null;
+        if (transform != null)
+        {
+            transform.localScale = initialScale;
+            transform.DOScale(finalScale, duration).SetEase(ease);
+            yield return null;
+        }
     }
     private void Update()
     {
