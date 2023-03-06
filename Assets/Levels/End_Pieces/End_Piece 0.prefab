@@ -79,8 +79,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   endPoint: {fileID: 2097797397753652224}
-  planeColor: {r: 0, g: 0, b: 0, a: 0}
-  obstacleColor: {r: 0, g: 0, b: 0, a: 0}
   plane: {fileID: 5834584830887935204}
   obstacles: []
 --- !u!1 &5834584830887935204
@@ -192,6 +190,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: FinishLine
+      objectReference: {fileID: 0}
+    - target: {fileID: 6574105804760324988, guid: e00bc09bdd794314b86749edde8ed8f7,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6574105804760324988, guid: e00bc09bdd794314b86749edde8ed8f7,
+        type: 3}
+      propertyPath: m_Center.y
+      value: 4.287164
       objectReference: {fileID: 0}
     - target: {fileID: 7537418810189452176, guid: e00bc09bdd794314b86749edde8ed8f7,
         type: 3}

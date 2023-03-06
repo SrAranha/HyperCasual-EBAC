@@ -315,7 +315,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   levelContainer: {fileID: 418425562}
-  piecesAmount: 5
+  piecesAmount: 10
   levelColors:
   - planeColor: {r: 0.3882353, g: 0.10980392, b: 0.5803922, a: 1}
     obstacleColor: {r: 1, g: 0.8666667, b: 0.1254902, a: 1}
@@ -339,6 +339,7 @@ MonoBehaviour:
   - {fileID: 216596851310216009, guid: 9e23850cee229cf4384a6aa9a13336b5, type: 3}
   - {fileID: 216596851310216009, guid: 743bf51c22a0c2147b8404c13e5d3541, type: 3}
   - {fileID: 216596851310216009, guid: ea22dd65a82794b4294a34dbb79648ed, type: 3}
+  - {fileID: 216596851310216009, guid: f96e71f8824c5c447b9787e373609941, type: 3}
   endPiecesList:
   - {fileID: 216596851310216009, guid: c780799d708da4a4c9576c85231b8469, type: 3}
   currentLevel: []

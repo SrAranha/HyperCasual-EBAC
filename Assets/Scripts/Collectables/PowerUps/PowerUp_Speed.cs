@@ -7,6 +7,6 @@ public class PowerUp_Speed : PowerUp_Base
     protected override void PowerUpStart()
     {
         base.PowerUpStart();
-        PlayerController.instance.SpeedUp(newSpeed, duration);
+        PlayerController.instance.SpeedUp(newSpeed, powerupDuration);
     }
 }
