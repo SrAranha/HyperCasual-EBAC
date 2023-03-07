@@ -35,12 +35,14 @@ public class PlayerCollision : Singleton<PlayerCollision>
     }
     private void LoseGame()
     {
+        PlayerController.instance.canMove = false;
         playerAnimation.PlayAnimation(PlayerAnimation.AnimationTypes.DEATH);
         loseScreen.SetActive(true);
         StartingGame.ReduceTimeScale(timeScale.timeScale);
     }
     private void WinGame()
     {
+        PlayerController.instance.canMove = false;
         playerAnimation.PlayAnimation(PlayerAnimation.AnimationTypes.IDLE);
         winScreen.SetActive(true);
         StartingGame.ReduceTimeScale(timeScale.timeScale);
